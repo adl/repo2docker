@@ -82,7 +82,9 @@ Building an image
 The simplest invocation of ``repo2docker`` builds a Docker image
 from a git repo, then runs a Jupyter server within the image
 so you can explore the repository's contents.
-You can do this with the following command::
+You can do this with the following command:
+
+.. code-block:: bash
 
   jupyter-repo2docker https://github.com/jakevdp/PythonDataScienceHandbook
 
@@ -102,7 +104,7 @@ If you want to debug and understand the details of the docker image being built,
 you can pass the ``debug`` parameter to the commandline. This will print the
 generated ``Dockerfile`` before building and running it.
 
-  .. code-block:: bash
+.. code-block:: bash
 
   jupyter-repo2docker --debug https://github.com/jakevdp/PythonDataScienceHandbook
 
@@ -111,7 +113,7 @@ If you only want to see the ``Dockerfile`` output but not actually build it,
 you can also pass ``--no-build`` to the commandline. This ``Dockerfile`` output
 is for **debugging purposes** only - it can not be used by docker directly.
 
-  .. code-block:: bash
+.. code-block:: bash
 
   jupyter-repo2docker --no-build --debug https://github.com/jakevdp/PythonDataScienceHandbook
 
@@ -120,6 +122,8 @@ Accessing help from the command line
 ------------------------------------
 
 For a list of all the build configurations at your disposal, see the
-CLI help::
+CLI help:
+
+.. code-block:: bash
 
   jupyter-repo2docker -h
